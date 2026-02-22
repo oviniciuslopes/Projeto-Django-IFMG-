@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhe do Aluno</title>
+</head>
+<body>
+    <h1>Detalhes de {{ aluno.nome }}</h1>
+    <p>Nome: {{ aluno.nome }}</p>
+    <p>Idade: {{ aluno.idade }} anos</p>
+    <p>Matriculado: {% if aluno.matriculado %}Sim{% else %}Não{% endif %}</p>
+    <a href="{% url 'lista_alunos' %}">Voltar para a lista de alunos</a>
+</body>
+</html>

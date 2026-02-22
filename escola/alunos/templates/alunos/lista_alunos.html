@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Alunos</title>
+</head>
+<body>
+    <div style="margin-bottom: 20px;">
+        {% if user.is_authenticated %}
+            <p>Olá, <strong>{{ user.username }}</strong>!</p>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Sair (Logout)</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">Entrar (Login)</a>
+        {% endif %}
+    </div>
+
+    <h1>Alunos Cadastrados</h1>
+
+    <a href="{% url 'cadastrar_aluno' %}">Novo Aluno</a>
+
+    <ul>
+        {% for aluno in alunos %}
+            <li>
+                <a href="{% url 'detalhe_aluno' aluno.id %}">
+                    {{ aluno.nome }} - {{ aluno.idade }} anos
+                </a>
+                {% if aluno.matriculado %}
+                    (Matriculado)
+                {% else %}
+                    (Não Matriculado)
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

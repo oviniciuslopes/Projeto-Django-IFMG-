@@ -1,0 +1,13 @@
+http://127.0.0.1:8000/alunos/detalhe - carrega a view detalhe 
+
+http://127.0.0.1:8000/alunos/detalhe/1/ - carrega a view detalhe_aluno com os dados de ID 1 
+
+----------------xxx ------------ 
+
+super user 
+
+super user: admvini
+vini@gmail.com
+password: 12345
+
+------------- xxxxxxxx ---------
