@@ -1,1 +1,1 @@
-Segue o arquivo .zip projeto Django sobre atividade final relacionado ao Django. 
+Segue o arquivo os arquivos do projeto Django IFMG
